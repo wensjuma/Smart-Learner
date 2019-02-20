@@ -7,7 +7,10 @@ from functools import wraps
 
 app = Flask(__name__)
 
-
+@app.route('/')
+def index():
+    return render_template('index.html')
+master
 @app.route('/questions')
 def employees():
     def db_query():
@@ -16,6 +19,7 @@ def employees():
         return emps
     res = db_query()
     return render_template('questions.html', result=res, content_type='application/json')
+
 
 @app.route('/')
 def index():
