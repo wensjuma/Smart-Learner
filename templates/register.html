@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+
+
+{% block body %}
+
+<div class="card" style="width: 40rem; height:34rem auto">
+    <div class="card-body">
+      <h5 class="card-title">SignUp</h5>
+      {% from 'shared/_formhelpers.html' import render_field %}
+      <form action="" method="POST">
+          <div class="form-group">
+              {{ render_field(form.name, class = "form-control") }}
+          </div>
+          <div class="form-group">
+              
+              {{ render_field(form.username, class = "form-control") }}
+          </div>
+          <div class="form-group">
+              {{ render_field(form.email, class = "form-control") }}
+          </div>
+          <div class="form-group">
+              {{ render_field(form.password, class = "form-control") }}
+          </div>
+          <div class="form-group">
+              {{ render_field(form.confirm, class = "form-control")}}
+          </div>
+          <input class="btn btn-outline-primary" type="submit" value="SignUp" />
+      </form>
+     
+    </div>
+  </div>
+
+
+{% endblock %}

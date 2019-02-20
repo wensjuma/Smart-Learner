@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+
+<meta charset="UTF-8">
+<title>Users</title>
+<table id="employees" style="width:100%">
+    {% if result %}
+    <tr>
+        <th> Name</th>
+        <th>Username</th>
+        <th>Email</th>
+    </tr>
+    {% for row in result %}
+    <tr>
+        <td> {{ row.name }}</td>
+        <td> {{ row.username }}</td>
+        <td> {{ row.email}}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+</table>
+{% endblock%}
